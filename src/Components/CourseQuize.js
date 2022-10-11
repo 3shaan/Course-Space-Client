@@ -10,7 +10,7 @@ const CourseQuize = () => {
     // console.log(quizData.data.questions);
     console.log(CountCorrect);
     return (
-        <div>
+        <div className='w-9/12 mx-auto'>
             <h1 className='text-3xl text-center mt-10'>This is quize section for {name} </h1>
             {
                 quizes.map(quize => <QuizeDetails key={quize.id} quize ={quize} setCorrect={setCorrect} CountCorrect = {CountCorrect} ></QuizeDetails>)

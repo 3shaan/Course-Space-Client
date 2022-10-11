@@ -31,10 +31,10 @@ const QuizeDetails = ({quize, setCorrect, CountCorrect}) => {
         <div className='my-10'>
             <h1 className='text-2xl '>quistion : {question}</h1>
             <div>
-                <div className='grid grid-cols-2 gap-5'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                     {options.map(option => {
                        return (
-                        <div onClick={(e)=>correct(e.target.innerText)} key={Math.random()}  className="box-content border text-xl mt-4 rounded-lg h-20 flex items-center justify-center w-96 p-3 bg-base-200">
+                        <div onClick={(e)=>correct(e.target.innerText)} key={Math.random()}  className="box-content border text-xl mt-4 rounded-lg lg:h-20 lg:flex items-center justify-center lg:w-96 p-3 bg-base-200">
                        <p className='p-4'><FontAwesomeIcon className='mx-4' icon={faCheckSquare}/>{option}</p>
                    </div> 
                        )
