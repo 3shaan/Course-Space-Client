@@ -4,8 +4,6 @@ import { useLoaderData } from 'react-router-dom';
 
 const Statistics = () => {
     const data = useLoaderData();
-    console.log(data.data);
-    
     return (
         <div className=' mt-10'>
             <div>

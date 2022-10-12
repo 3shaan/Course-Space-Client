@@ -10,17 +10,17 @@ const QuizeDetails = ({quize, setCorrect, CountCorrect,countWrong, SetCountWrong
     const handalewAnswer = (option, position)=>{
 
         
-        // eslint-disable-next-line array-callback-return
         const updateColor = color.map((bg, index)=>{
             if(index === position && option === correctAnswer){
-               return bg= 'bg-blue-800'
+               return bg= 'bg-blue-800';
             }
             if ( index === position && option !== correctAnswer){
-                return bg = 'bg-red-800'
+                return bg = 'bg-red-800';
             }
            
         })
             setColor(updateColor);
+
             const updatecheck = check.map((item, index)=>{
                 return index === position ? !item : item 
             })
@@ -52,7 +52,7 @@ const QuizeDetails = ({quize, setCorrect, CountCorrect,countWrong, SetCountWrong
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                     {options.map((option,index) => {
                        return (
-                        <div onClick={()=> handalewAnswer(option, index)} key={Math.random()}  className={`box-content border text-xl mt-4 rounded-lg lg:h-20 lg:flex items-center justify-center lg:w-96 p-3 bg-base-200 ${color[index]}`}>
+                        <div onClick={()=> handalewAnswer(option, index)} key={Math.random()}  className={`box-content border text-xl mt-4 rounded-lg lg:h-20 lg:flex items-center justify-center lg:w-96 p-3 ${color[index]}`}>
                        <p className='p-4'><input type="checkbox" checked={check[index]} onChange={handalewAnswer} className="checkbox checkbox-secondary" /> {option}</p>
                    </div> 
                        )
