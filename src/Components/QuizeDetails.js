@@ -1,6 +1,8 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons'
 
 const QuizeDetails = ({quize, setCorrect, CountCorrect,countWrong, SetCountWrong}) => {
     const {question, options, correctAnswer} = quize;
@@ -46,9 +48,17 @@ const QuizeDetails = ({quize, setCorrect, CountCorrect,countWrong, SetCountWrong
         setAnswer(option);
         
     }
+
+    const rightanswer = ()=>{
+            toast( `Correct answer is : ${correctAnswer}`);   
+    }
+
+
+
     return (
-        <div className='my-10 bg-base-300 rounded-md p-5 shadow-lg'>
+        <div className='my-10 bg-base-300 rounded-md p-5 shadow-lg relative'>
             <h1 className='text-2xl '>Question : {question}</h1>
+            <FontAwesomeIcon onClick={()=>rightanswer()} icon={faEye} className='top-3 absolute right-3' ></FontAwesomeIcon>
             <div>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-5'>
                     {options.map((option,index) => {
