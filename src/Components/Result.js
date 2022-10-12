@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Result = ({countWrong, CountCorrect}) => {
-    console.log(countWrong);
     return (
         <div className='lg:mt-10'>
             <h1 className='lg:text-2xl'>Correct answer : {CountCorrect}</h1>
