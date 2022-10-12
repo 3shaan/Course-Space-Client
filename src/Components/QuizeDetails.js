@@ -18,7 +18,7 @@ const QuizeDetails = ({quize, setCorrect, CountCorrect,countWrong, SetCountWrong
                 return bg = 'bg-red-800';
             }
            
-        })
+        }) 
             setColor(updateColor);
 
             const updatecheck = check.map((item, index)=>{
