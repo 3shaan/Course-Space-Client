@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import React from 'react';
 
 const Hero = () => {
@@ -11,7 +13,7 @@ const Hero = () => {
 				They say, knowledge is power. So select a course, learn it, show your intelectuality.
 			</p>
 			<div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-				<a rel="noopener noreferrer" href="." className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900 hover:bg-blue-700 duration-700">Course start</a>
+				<a rel="noopener noreferrer" href="#course" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-400 dark:text-gray-900 hover:bg-blue-700 duration-700">Course Start <FontAwesomeIcon icon={faPlay} /></a>
 			</div>
 		</div>
 		<div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 lg:order-1">

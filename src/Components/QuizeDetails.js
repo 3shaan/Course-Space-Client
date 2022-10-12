@@ -10,6 +10,7 @@ const QuizeDetails = ({quize, setCorrect, CountCorrect,countWrong, SetCountWrong
     const handalewAnswer = (option, position)=>{
 
         
+        // eslint-disable-next-line array-callback-return
         const updateColor = color.map((bg, index)=>{
             if(index === position && option === correctAnswer){
                return bg= 'bg-blue-800';

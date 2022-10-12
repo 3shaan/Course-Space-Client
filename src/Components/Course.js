@@ -5,7 +5,7 @@ const Course = ({course}) => {
     // console.log(course);
     const {id, logo, name , total} = course;
     return (
-        <div>
+        <div id='course'>
             <div className="card card-compact w-96 bg-base-100 shadow-xl">
             <figure><img src={logo} alt="Shoes" /></figure>
             <div className="card-body">
